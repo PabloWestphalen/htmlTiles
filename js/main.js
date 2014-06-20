@@ -62,6 +62,12 @@ function setupEvents() {
             doTile();
         }
     });
+    
+    $("body").on("click", ".tile", function(evt) {
+       if($(evt.target).hasClass("current")) {
+           doTile();
+       }
+    });
 }
 
 function doTile() {
